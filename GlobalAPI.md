@@ -14,7 +14,7 @@ title: 全局
 
 ### `afterAll(fn, timeout)`
 
-在测试文件中所有的测试用例完成后执行一个函数。如果函数返回一个promise或者是一个生成器, Jest会等待promise执行完成然后再继续。
+在测试文件中所有的测试用例完成后执行一个函数。如果函数返回一个promise或者是一个generator, Jest会等待promise执行完成然后再继续。
 另外, 你可以设置`timeout` (毫秒级) 来指定多长时间后取消等待。 _注意: 默认 timeout 为 5 秒。_
 
 这在你想清除一些如在所有测试用例中共享的全局设置状态时显得非常有用。
@@ -52,7 +52,7 @@ test('can insert a thing', () => {
 
 ### `afterEach(fn, timeout)`
 
-在测试文件中的每一个测试用例完成之后执行一个函数。同样，如果函数返回一个promise或者是一个生成器, Jest会等待promise执行完成然后再继续。
+在测试文件中的每一个测试用例完成之后执行一个函数。同样，如果函数返回一个promise或者是一个generator, Jest会等待promise执行完成然后再继续。
 
 在测试文件中所有的测试用例完成后执行一个函数。如果函数返回一个promise或者是一个生成器, Jest会等待promise执行完成然后再继续。
 另外, 你可以设置`timeout` (毫秒级) 来指定多长时间后取消等待。 _注意: 默认 timeout 为 5 秒。_
