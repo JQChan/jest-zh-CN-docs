@@ -15,7 +15,7 @@ yarn add --dev jest
 npm install --save-dev jest
 ```
 
-Note: Jest documentation uses `yarn` commands, but `npm` will also work. You can compare `yarn` and `npm` commands in the [yarn docs, here](https://yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison).
+注意: Jest 文档使用 `yarn` 命令, 使用 `npm` 命令同样也会生效. 你可以在 [yarn 文档](https://yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison)上比较 `yarn` and `npm` 命令.
 
 Let's get started by writing a test for a hypothetical function that adds two numbers. First, create a `sum.js` file:
 
@@ -57,7 +57,7 @@ PASS  ./sum.test.js
 
 This test used `expect` and `toBe` to test that two values were exactly identical. To learn about the other things that Jest can test, see [Using Matchers](UsingMatchers.md).
 
-## Running from command line
+## 使用命令行运行
 
 You can run Jest directly from the CLI (if it's globally available in your `PATH`, e.g. by `yarn global add jest` or `npm install jest --global`) with a variety of useful options.
 
@@ -69,9 +69,9 @@ jest my-test --notify --config=config.json
 
 If you'd like to learn more about running `jest` through the command line, take a look at the [Jest CLI Options](CLI.md) page.
 
-## Additional Configuration
+## 附加配置
 
-### Generate a basic configuration file
+### 生成基本配置文件
 
 Based on your project, Jest will ask you a few questions and will create a basic configuration file with a short description for each option:
 
@@ -79,15 +79,15 @@ Based on your project, Jest will ask you a few questions and will create a basic
 jest --init
 ```
 
-### Using Babel
+### 使用Babel
 
-To use [Babel](http://babeljs.io/), install the `babel-jest` and `regenerator-runtime` packages via `yarn`:
+结合[Babel](http://babeljs.io/)使用, 请使用 `yarn` 安装 `babel-jest` 以及 `regenerator-runtime` 模块:
 
 ```bash
 yarn add --dev babel-jest babel-core regenerator-runtime
 ```
 
-Or `npm`:
+或者通过 `npm` 安装:
 
 ```bash
 npm install --save-dev babel-jest babel-core regenerator-runtime
@@ -141,10 +141,10 @@ You are now set up to use all ES6 features and React specific syntax.
 }
 ```
 
-### Using webpack
+### 使用webpack
 
 Jest can be used in projects that use [webpack](https://webpack.github.io/) to manage assets, styles, and compilation. webpack does offer some unique challenges over other tools. Refer to the [webpack guide](Webpack.md) to get started.
 
-### Using TypeScript
+### 使用TypeScript
 
-To use TypeScript in your tests you can use [ts-jest](https://github.com/kulshekhar/ts-jest).
+要在测试中使用TypeScript,你可以使用[ts-jest](https://github.com/kulshekhar/ts-jest).
