@@ -15,7 +15,7 @@ yarn add --dev jest
 npm install --save-dev jest
 ```
 
-注意: Jest 文档使用 `yarn` 命令, 使用 `npm` 命令同样也会生效. 你可以在 [yarn 文档](https://yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison)上比较 `yarn` and `npm` 命令.
+注意: Jest 文档中默认使用使用 `yarn` 命令, 你也可以使用 `npm` 命令. 你可以在 [yarn 文档](https://yarnpkg.com/en/docs/migrating-from-npm#toc-cli-commands-comparison)上比较 `yarn` and `npm` 命令的不同.
 
 Let's get started by writing a test for a hypothetical function that adds two numbers. First, create a `sum.js` file:
 
