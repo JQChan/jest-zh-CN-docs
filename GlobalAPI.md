@@ -84,10 +84,9 @@ test('can insert a thing', () => {
 });
 ```
 
-Here the `afterEach` ensures that `cleanUpDatabase` is called after each test runs.
+这里`afterEach` 会确保 `cleanUpDatabase` 会在每个测试用例完成后执行。
 
-If `afterEach` is inside a `describe` block, it only runs after the tests that are inside this describe block.
-
+如果`afterEach`在 `describe` 测试用例块中, 它只会在测试用例块中的每个测试用例运行完成后执行。 
 If you want to run some cleanup just once, after all of the tests run, use `afterAll` instead.
 
 ### `beforeAll(fn, timeout)`
@@ -98,7 +97,7 @@ Optionally, you can provide a `timeout` (in milliseconds) for specifying how lon
 
 This is often useful if you want to set up some global state that will be used by many tests.
 
-For example:
+例如:
 
 ```js
 const globalDatabase = makeGlobalDatabase();
@@ -134,7 +133,7 @@ Optionally, you can provide a `timeout` (in milliseconds) for specifying how lon
 
 This is often useful if you want to reset some global state that will be used by many tests.
 
-For example:
+例如:
 
 ```js
 const globalDatabase = makeGlobalDatabase();
