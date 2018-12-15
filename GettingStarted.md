@@ -46,14 +46,14 @@ Add the following section to your `package.json`:
 }
 ```
 
-Finally, run `yarn test` or `npm run test` and Jest will print this message:
+最后，运行命令 `yarn test` 或者 `npm run test` ，Jest将会打印以下信息:
 
 ```bash
 PASS  ./sum.test.js
 ✓ adds 1 + 2 to equal 3 (5ms)
 ```
 
-**You just successfully wrote your first test using Jest!**
+**你刚刚已经成功地编写了你的第一个Jest测试用例！**
 
 This test used `expect` and `toBe` to test that two values were exactly identical. To learn about the other things that Jest can test, see [Using Matchers](UsingMatchers.md).
 
@@ -67,7 +67,7 @@ Here's how to run Jest on files matching `my-test`, using `config.json` as a con
 jest my-test --notify --config=config.json
 ```
 
-If you'd like to learn more about running `jest` through the command line, take a look at the [Jest CLI Options](CLI.md) page.
+想了解更多关于通过命令行运行 `jest`, 请查看 [Jest CLI Options](CLI.md).
 
 ## 附加配置
 
@@ -93,15 +93,15 @@ yarn add --dev babel-jest babel-core regenerator-runtime
 npm install --save-dev babel-jest babel-core regenerator-runtime
 ```
 
-> Note: If you are using Babel version 7 then you need to install `babel-jest`, `babel-core@^7.0.0-bridge.0` and `@babel/core` with the following command or its `npm` equivalent:
+> 注意: 如果你使用Babel 7，你需要使用以下命令安装 `babel-jest`， `babel-core@^7.0.0-bridge.0` 以及 `@babel/core`，当然，使用npm命令也是可以的:
 >
 > ```bash
 > yarn add --dev babel-jest babel-core@^7.0.0-bridge.0 @babel/core regenerator-runtime
 > ```
 >
-> You will need to use `babel.config.js` in order to transpile `node_modules`. See https://babeljs.io/docs/en/next/config-files for more information.
+> 为了转换 `node_modules` ， 你需要使用babel配置 `babel.config.js`. 详情请查看https://babeljs.io/docs/en/next/config-files.
 >
-> You can also see the example in the Jest repository: https://github.com/facebook/jest/tree/master/examples/babel-7
+> 你可以参考Jest仓库中的示例: https://github.com/facebook/jest/tree/master/examples/babel-7
 
 _Note: Explicitly installing `regenerator-runtime` is not needed if you use `npm` 3 or 4 or Yarn_
 
@@ -130,7 +130,7 @@ You are now set up to use all ES6 features and React specific syntax.
 }
 ```
 
-> Note: `babel-jest` is automatically installed when installing Jest and will automatically transform files if a babel configuration exists in your project. To avoid this behavior, you can explicitly reset the `transform` configuration option:
+> 注意: `babel-jest` is automatically installed when installing Jest and will automatically transform files if a babel configuration exists in your project. To avoid this behavior, you can explicitly reset the `transform` configuration option:
 
 ```json
 // package.json
