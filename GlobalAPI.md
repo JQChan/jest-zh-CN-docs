@@ -321,7 +321,7 @@ describe('my other beverage', () => {
 
 ### `describe.only.each(table)(name, fn)`
 
-Also under the aliases: `fdescribe.each(table)(name, fn)` and `` fdescribe.each`table`(name, fn) ``
+别名: `fdescribe.each(table)(name, fn)` and `` fdescribe.each`table`(name, fn) ``
 
 Use `describe.only.each` if you want to only run specific tests suites of data driven tests.
 
@@ -389,7 +389,7 @@ Using `describe.skip` is often just an easier alternative to temporarily comment
 
 ### `describe.skip.each(table)(name, fn)`
 
-Also under the aliases: `xdescribe.each(table)(name, fn)` and `` xdescribe.each`table`(name, fn) ``
+别名: `xdescribe.each(table)(name, fn)` and `` xdescribe.each`table`(name, fn) ``
 
 Use `describe.skip.each` if you want to stop running a suite of data driven tests.
 
@@ -461,7 +461,7 @@ Even though the call to `test` will return right away, the test doesn't complete
 
 ### `test.each(table)(name, fn, timeout)`
 
-Also under the alias: `it.each(table)(name, fn)` and `` it.each`table`(name, fn) ``
+别名: `it.each(table)(name, fn)` and `` it.each`table`(name, fn) ``
 
 Use `test.each` if you keep duplicating the same test with different data. `test.each` allows you to write the test once and pass data in.
 
@@ -485,7 +485,7 @@ Use `test.each` if you keep duplicating the same test with different data. `test
 - `fn`: `Function` the test to be ran, this is the function that will receive the parameters in each row as function arguments.
 - Optionally, you can provide a `timeout` (in milliseconds) for specifying how long to wait for each row before aborting. _Note: The default timeout is 5 seconds._
 
-Example:
+例如:
 
 ```js
 test.each([[1, 1, 2], [1, 2, 3], [2, 1, 3]])(
@@ -521,7 +521,7 @@ test.each`
 
 ### `test.only(name, fn, timeout)`
 
-Also under the aliases: `it.only(name, fn, timeout)` or `fit(name, fn, timeout)`
+别名: `it.only(name, fn, timeout)` or `fit(name, fn, timeout)`
 
 When you are debugging a large test file, you will often only want to run a subset of tests. You can use `.only` to specify which tests are the only ones you want to run in that test file.
 
@@ -545,7 +545,7 @@ Usually you wouldn't check code using `test.only` into source control - you woul
 
 ### `test.only.each(table)(name, fn)`
 
-Also under the aliases: `it.only.each(table)(name, fn)`, `fit.each(table)(name, fn)`, `` it.only.each`table`(name, fn) `` and `` fit.each`table`(name, fn) ``
+别名: `it.only.each(table)(name, fn)`, `fit.each(table)(name, fn)`, `` it.only.each`table`(name, fn) `` and `` fit.each`table`(name, fn) ``
 
 Use `test.only.each` if you want to only run specific tests with different test data.
 
@@ -585,11 +585,11 @@ test('will not be ran', () => {
 
 ### `test.skip(name, fn)`
 
-Also under the aliases: `it.skip(name, fn)` or `xit(name, fn)` or `xtest(name, fn)`
+别名: `it.skip(name, fn)` 或 `xit(name, fn)` 或 `xtest(name, fn)`
 
-When you are maintaining a large codebase, you may sometimes find a test that is temporarily broken for some reason. If you want to skip running this test, but you don't want to just delete this code, you can use `test.skip` to specify some tests to skip.
+当你维护一个很庞大的代码库，有时你会发现某个测试用例由于某些原因暂时无法测试通过。如果你想跳过执行这个测试用例，但是又不想删除这些代码，你可以用`test.skip` 来指定跳过那些测试用例。
 
-For example, let's say you had these tests:
+例如，你有以下的测试用例:
 
 ```js
 test('it is raining', () => {
@@ -601,13 +601,13 @@ test.skip('it is not snowing', () => {
 });
 ```
 
-Only the "it is raining" test will run, since the other test is run with `test.skip`.
+只有测试用例"it is raining"会执行，另一个测试用例会使用`test.skip`来跳过执行。
 
 You could simply comment the test out, but it's often a bit nicer to use `test.skip` because it will maintain indentation and syntax highlighting.
 
 ### `test.skip.each(table)(name, fn)`
 
-Also under the aliases: `it.skip.each(table)(name, fn)`, `xit.each(table)(name, fn)`, `xtest.each(table)(name, fn)`, `` it.skip.each`table`(name, fn) ``, `` xit.each`table`(name, fn) `` and `` xtest.each`table`(name, fn) ``
+别名: `it.skip.each(table)(name, fn)`, `xit.each(table)(name, fn)`, `xtest.each(table)(name, fn)`, `` it.skip.each`table`(name, fn) ``, `` xit.each`table`(name, fn) `` 以及 `` xtest.each`table`(name, fn) ``
 
 Use `test.skip.each` if you want to stop running a collection of data driven tests.
 
@@ -647,13 +647,12 @@ test('will be ran', () => {
 
 ### `test.todo(name)`
 
-Use `test.todo` when you are planning on writing tests. These tests will be highlighted in the summary output at the end so you know how many tests you still need todo.
-
-_Note_: If you supply a test callback function then the `test.todo` will throw an error. If you have already implemented the test and it is broken and you do not want it to run, then use `test.skip` instead.
+当你有一些测试用例的待办事项时，你可以使用`test.todo`。 这些测试用例将会在输出窗口高亮显示，这样你就可以知道你还有多少个测试用例的待办事项了。
+_注意_: If you supply a test callback function then the `test.todo` will throw an error. If you have already implemented the test and it is broken and you do not want it to run, then use `test.skip` instead.
 
 #### API
 
-- `name`: `String` the title of the test plan.
+- `name`: `String` 测试计划的标题the title of the test plan.
 
 Example:
 
